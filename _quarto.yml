@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "My Explorations with LLMs"
+  title: "Praachi's AI Adventures"
   navbar:
     right:
       - about.qmd
@@ -12,7 +12,7 @@ website:
         href: https://twitter.com
 format:
   html:
-    theme: cosmo
+    theme: lux
     css: styles.css
 
 execute:
