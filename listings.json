@@ -2,6 +2,12 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/006_Claude Career/index.html",
+      "/posts/005_ChatGPT Career/index.html",
+      "/posts/004_Flop or Bop 1/index.html",
+      "/posts/002_ChatGPT Abstract Qs1/index.html",
+      "/posts/003_Originality/index.html",
+      "/posts/001_SurveyResults/index.html",
       "/posts/000_test_post/index.html"
     ]
   }
