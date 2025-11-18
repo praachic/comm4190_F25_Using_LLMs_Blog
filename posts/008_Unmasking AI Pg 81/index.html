@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Praachi Chakraborty">
+<meta name="dcterms.date" content="2025-11-05">
+<meta name="description" content="Joy Buolamwini on always questioning the gold standard">
 
-<title>My Explorations with LLMs – Praachi’s AI Adventures</title>
+<title>Design Is Not Destiny – Praachi’s AI Adventures</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c00b42e811b0fd9a18ac62455ba22490.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c00b42e811b0fd9a18ac62455ba22490.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,77 +71,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Praachi’s AI Adventures</span>
     </a>
   </div>
@@ -151,7 +94,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -174,340 +117,77 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Explorations with LLMs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Design Is Not Destiny</h1>
+                  <div>
+        <div class="description">
+          Joy Buolamwini on always questioning the gold standard
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Unmasking AI</div>
+                <div class="quarto-category">AI in Life</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Praachi Chakraborty </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 5, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div><div class="category" data-category="QUklMjBpbiUyMExpZmU=">AI in Life <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QUklMjB2cyUyMEh1bWFu">AI vs Human <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Q2xhdWRl">Claude <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RnVu">Fun <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TExNcw==">LLMs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bG9naWM=">logic <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWFya2V0aW5n">Marketing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TXVzaWM=">Music <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGVyY2VwdGlvbg==">Perception <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHJvbXB0aW5n">prompting <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VGhlb3JldGljYWw=">Theoretical <span class="quarto-category-count">(3)</span></div><div class="category" data-category="VW5tYXNraW5nJTIwQUk=">Unmasking AI <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>I think it is undeniable that <em>Unmasking AI</em> is a book whose implications stick with you long after you close its pages. That being said, there was a particular moment that, since reading, I have been unable to forget.</p>
+<p>During this passage, Joy Buolamwini is recounting her time researching at MIT. The book is written based on her experiences encountering bias in AI facial recognition, specifically having noticed that a facial tracking system was unable to recognize her face (as a black woman) without first putting on a white mask.</p>
+<p>To conclude this particular passage, Joy writes:</p>
+<blockquote class="blockquote">
+<dl>
+<dt>“I was left with one major lesson: always question the so-called gold standards. Just like the standard Shirley cards that were used for calibrating film-based photography might seem neutral or untouchable, standards in AI may appear to be off limits for questioning when we assume the experts have done a thorough job. This is not always the case, particularly when the experts do not reflect the rest of society. But design is not destiny. I knew I had to change the system.”</dt>
+<dd>
+Joy Buolamwini, <em>Unmasking AI,</em> pg. 81
+</dd>
+</dl>
+</blockquote>
+<p>The logic itself, when boiled down, is quite simple: just because something is the norm doesn’t mean it is perfect. Yet, despite knowing <em>(obviously,)</em> that AI systems are created by humans and that they are trained on imperfect data, something about this statement felt almost quietly radical.</p>
+<section id="shirley-cards" class="level3">
+<h3 class="anchored" data-anchor-id="shirley-cards">Shirley Cards</h3>
+<p>Notably, Buolamwini is not explicitly saying “set standards are bad” or even that AI is bad. The analogy Buolamwini uses here is from old film photography. When color film was first being shown on television, camera companies and TV producers used something called “Shirley Cards” to add color and exposure to their productions. These cards were originally calibrated and fine-tuned on a white woman. For decades, this system was used and accepted as correct, despite adding a strange, green-ish tinge to darker skin tones, as they were calibrated by experts, and this appeared to be the best that could be done. The main issue here was not that Shirley Cards were malicious. Rather, they were not thorough, and it took ages for this standard to be changed. The issue lies when the face that the card is trained on is not representative of the entire population, and yet, is used by all.</p>
+</section>
+<section id="ais-gold-standard" class="level3">
+<h3 class="anchored" data-anchor-id="ais-gold-standard">AI’s Gold Standard</h3>
+<p>A lot of AI systems end up repeating the same pattern as we found in the Shirley cards. I often see startups and advertising show terms such as a “gold-standard dataset” or “benchmark accuracy” when describing how well their model can run. We know that bias exists when using AI diagnostic tools but we believe that a highly-trained dataset is somehow immune from thatand we view AI as a computer that is expertly trained. Yet even a “100% accurate tool” cannot be entirely trusted. Someone picked the data, labeled it, and decided what is right and wrong. In viewing AI as a machine, we forget the human who trained and built it.</p>
+<p>The point that Buolamwini makes here is that just because a system is expertly made does not mean it is perfectly or neutrally made, and it is easy to get the two confused. Even beyond AI, I think we will find that the more we examine what we take to be a “gold standard,” the more we discover that often the concept of what is correct was defined by a team of imperfect humans. In Buolamwini’s words, “design is not destiny”;</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="VW5tYXNraW5nJTIwQUklMkNBSSUyMGluJTIwTGlmZQ==" data-listing-date-sort="1762300800000" data-listing-file-modified-sort="1763444352323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="581">
-<div class="thumbnail"><a href="./posts/008_Unmasking AI Pg 81/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/008_Unmasking AI Pg 81/index.html" class="no-external">Design Is Not Destiny</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VW5tYXNraW5nJTIwQUk='); return false;">Unmasking AI</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUklMjBpbiUyMExpZmU='); return false;">AI in Life</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/008_Unmasking AI Pg 81/index.html" class="no-external">
-<p>Joy Buolamwini on always questioning the gold standard</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/008_Unmasking AI Pg 81/index.html" class="no-external">
-<div class="listing-date">
-Nov 5, 2025
-</div>
-<div class="listing-author">
-Praachi Chakraborty
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="VGhlb3JldGljYWwlMkNBSSUyMHZzJTIwSHVtYW4lMkNDbGF1ZGU=" data-listing-date-sort="1759104000000" data-listing-file-modified-sort="1763444352323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="845">
-<div class="thumbnail"><a href="./posts/006_Claude Career/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/006_Claude Career/index.html" class="no-external">What career would Claude have?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VGhlb3JldGljYWw='); return false;">Theoretical</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUklMjB2cyUyMEh1bWFu'); return false;">AI vs Human</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2xhdWRl'); return false;">Claude</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/006_Claude Career/index.html" class="no-external">
-<p>Comparing ChatGPT and Claude’s dream lives</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/006_Claude Career/index.html" class="no-external">
-<div class="listing-date">
-Sep 29, 2025
-</div>
-<div class="listing-author">
-Praachi Chakraborty
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="VGhlb3JldGljYWwlMkNBSSUyMHZzJTIwSHVtYW4lMkNDbGF1ZGU=" data-listing-date-sort="1759104000000" data-listing-file-modified-sort="1763444352323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="838">
-<div class="thumbnail"><a href="./posts/007_Claude Emotions/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/007_Claude Emotions/index.html" class="no-external">What career would Claude have?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VGhlb3JldGljYWw='); return false;">Theoretical</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUklMjB2cyUyMEh1bWFu'); return false;">AI vs Human</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2xhdWRl'); return false;">Claude</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/007_Claude Emotions/index.html" class="no-external">
-<p>Comparing ChatGPT and Claude’s dream lives</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/007_Claude Emotions/index.html" class="no-external">
-<div class="listing-date">
-Sep 29, 2025
-</div>
-<div class="listing-author">
-Praachi Chakraborty
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="VGhlb3JldGljYWwlMkNBSSUyMHZzJTIwSHVtYW4=" data-listing-date-sort="1758758400000" data-listing-file-modified-sort="1763444352323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="873">
-<div class="thumbnail"><a href="./posts/005_ChatGPT Career/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/005_ChatGPT Career/index.html" class="no-external">What career would ChatGPT have?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VGhlb3JldGljYWw='); return false;">Theoretical</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUklMjB2cyUyMEh1bWFu'); return false;">AI vs Human</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/005_ChatGPT Career/index.html" class="no-external">
-<p>Letting ChatGPT create its dream life</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/005_ChatGPT Career/index.html" class="no-external">
-<div class="listing-date">
-Sep 25, 2025
-</div>
-<div class="listing-author">
-Praachi Chakraborty
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="TXVzaWMlMkNGdW4lMkNBSSUyMHZzJTIwSHVtYW4=" data-listing-date-sort="1758585600000" data-listing-file-modified-sort="1763444352323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="606">
-<div class="thumbnail"><a href="./posts/004_Flop or Bop 1/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/004_Flop or Bop 1/Flatio.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/004_Flop or Bop 1/index.html" class="no-external">Flop or Bop</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TXVzaWM='); return false;">Music</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RnVu'); return false;">Fun</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QUklMjB2cyUyMEh1bWFu'); return false;">AI vs Human</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/004_Flop or Bop 1/index.html" class="no-external">
-<p>Can AI make me an orchestral piece?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/004_Flop or Bop 1/index.html" class="no-external">
-<div class="listing-date">
-Sep 23, 2025
-</div>
-<div class="listing-author">
-Praachi Chakraborty
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="UGVyY2VwdGlvbiUyQ0Z1bg==" data-listing-date-sort="1758326400000" data-listing-file-modified-sort="1763444352310" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="599">
-<div class="thumbnail"><a href="./posts/002_ChatGPT Abstract Qs1/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/002_ChatGPT Abstract Qs1/index.html" class="no-external">Asking Chat GPT Abstract Questions, Part 1</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGVyY2VwdGlvbg=='); return false;">Perception</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RnVu'); return false;">Fun</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/002_ChatGPT Abstract Qs1/index.html" class="no-external">
-<p>Does ChatGPT have the same replies as my friends?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/002_ChatGPT Abstract Qs1/index.html" class="no-external">
-<div class="listing-date">
-Sep 20, 2025
-</div>
-<div class="listing-author">
-Praachi Chakraborty
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="UGVyY2VwdGlvbiUyQ0Z1bg==" data-listing-date-sort="1758326400000" data-listing-file-modified-sort="1763444352317" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="761">
-<div class="thumbnail"><a href="./posts/003_Originality/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/003_Originality/Algorithmic memory.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/003_Originality/index.html" class="no-external">How does ChatGPT process originality in research?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UGVyY2VwdGlvbg=='); return false;">Perception</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RnVu'); return false;">Fun</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/003_Originality/index.html" class="no-external">
-<p>How does ChatGPT process originality in research?</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/003_Originality/index.html" class="no-external">
-<div class="listing-date">
-Sep 20, 2025
-</div>
-<div class="listing-author">
-Praachi Chakraborty
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="cHJvbXB0aW5nJTJDbG9naWMlMkNNYXJrZXRpbmc=" data-listing-date-sort="1758240000000" data-listing-file-modified-sort="1763444352309" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="900">
-<div class="thumbnail"><a href="./posts/001_SurveyResults/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/001_SurveyResults/index.html" class="no-external">Can Chat GPT Simulate Survey Data?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWFya2V0aW5n'); return false;">Marketing</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/001_SurveyResults/index.html" class="no-external">
-<p>Using ChatGPT to test out an event idea</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/001_SurveyResults/index.html" class="no-external">
-<div class="listing-date">
-Sep 19, 2025
-</div>
-<div class="listing-author">
-Praachi Chakraborty
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="TExNcyUyQ3Byb21wdGluZyUyQ2xvZ2lj" data-listing-date-sort="1706832000000" data-listing-file-modified-sort="1763444352307" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="450">
-<div class="thumbnail"><a href="./posts/000_test_post/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/000_test_post/gpt3-5.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/000_test_post/index.html" class="no-external">A test post</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">LLMs</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0aW5n'); return false;">prompting</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bG9naWM='); return false;">logic</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/000_test_post/index.html" class="no-external">
-<p>An example post from a Jupyter notebook</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/000_test_post/index.html" class="no-external">
-<div class="listing-date">
-Feb 2, 2024
-</div>
-<div class="listing-author">
-An LLM User
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
