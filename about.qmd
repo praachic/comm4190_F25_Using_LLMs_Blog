@@ -1,8 +1,8 @@
 ---
-title: About
-image: profile.jpg
+title: About Me
+image: Praachi_Profile.HEIC
 about:
   template: jolla
 ---
 
-About this blog
+Hi! I'm Praachi. I'm a junior at Penn studying Economics with minors in Data Science & Analytics, Consumer Psychology, and Cognitive Science! I love baking, exploring, and anything related to plants! 
