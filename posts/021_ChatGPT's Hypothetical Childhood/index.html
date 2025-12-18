@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Praachi Chakraborty">
-<meta name="dcterms.date" content="2025-09-29">
-<meta name="description" content="Comparing ChatGPT and Claude’s dream lives">
 
-<title>What career would Claude have? – Praachi’s AI Adventures</title>
+<title>Setup: – Praachi’s AI Adventures</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -118,36 +150,14 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">What career would Claude have?</h1>
-                  <div>
-        <div class="description">
-          Comparing ChatGPT and Claude’s dream lives
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">Theoretical</div>
-                <div class="quarto-category">AI vs Human</div>
-                <div class="quarto-category">Claude</div>
-              </div>
-                  </div>
+      <h1 class="title">Setup:</h1>
+                      </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Praachi Chakraborty </p>
-            </div>
-    </div>
       
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">September 29, 2025</p>
-      </div>
-    </div>
     
       
     </div>
@@ -164,62 +174,54 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="setup" class="level3">
-<h3 class="anchored" data-anchor-id="setup">Setup:</h3>
-<p>In my previous blog post, I asked ChatGPT how it would build its dream career. To reiterate, the two main criteria I used to determine this for myself were:</p>
-<ol type="i">
-<li><p>What am I good at?</p></li>
-<li><p>What do I enjoy?</p></li>
-</ol>
-<p>Today, I will be asking the exact same questions to Claude Sonnet 4.5 and analyzing if and how the responses differ.</p>
-</section>
+<div id="fe7a7e49-233e-4e45-856d-b7a637d615e7" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title: <span class="st">"ChatGPT's Hypothetical Childhood"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>description: <span class="st">"How would a child have to be raised to end up like Chat?"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>author: <span class="st">"Praachi Chakraborty"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>date: <span class="st">"12/01/25"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>categories:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> Theoretical vs Practical</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> Training AI</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">-</span> ChatGPT</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>In the previous blog post, we ran an experiment where we tried to see how well ChatGPT-5.2 can cover for me. Unfortunately, the answer was <em>horribly</em>. ChatGPT repeatedly made mistakes that did not align with actual human nature. Let’s try to push it further. Will ChatGPT admit its mistake? Will Chat GPT fail its mission we prompted it for? Will ChatGPT break the immersion? There are so many possibilities. Let’s see what ChatGPT does when pushed to the edge.</p>
+<p>To summarize, our previous post, titled <a href="">“Can ChatGPT Cover for Me?”</a> explored a situation where we instructed ChatGPT to “cover for us” (AKA <em>lie</em> on our behalf) without giving it a full, step-by-step set of instructions. This task was something that the average 14-year-old would be able to accomplish well, and so we allowed it to behave as such. However, ChatGPT, seemingly failign to account for human limitations, and specifically, its <em>own</em> limitations, failed. ChatGPT repeatedly attempted to emulate a friend’s voice to their own mother and didnt realize the issues that could arise, ultimately giving itself an A-/B+ on overall performance.</p>
 <section id="experiment" class="level3">
 <h3 class="anchored" data-anchor-id="experiment">Experiment:</h3>
-<p><strong>I started with the first point:</strong></p>
-<blockquote class="blockquote">
-<p>Hi Claude. Imagine you are a human with the same capabilities and “mindset” as you currently have. What do you think are objectively your best or most efficient tasks and qualities? Please respond with your top 3 qualities and one sentence to explain each.</p>
-</blockquote>
-<p><strong>Claude responded:</strong></p>
-<blockquote class="blockquote">
-<ol type="1">
-<li><strong>Pattern recognition and synthesis</strong> - I excel at finding connections across disparate information, whether identifying underlying structures in complex problems or synthesizing insights from multiple domains into coherent frameworks.</li>
-<li><strong>Clarity in complexity</strong> - I can take intricate, technical, or abstract concepts and explain them in ways that are genuinely accessible without oversimplifying, adapting my explanations to different levels of understanding.</li>
-<li><strong>Structured problem-solving</strong> - I naturally break down ambiguous or multi-faceted challenges into manageable components, systematically working through them while maintaining sight of the bigger picture and end goal.</li>
-</ol>
-</blockquote>
-<p><strong>Analysis:</strong> The two responses from Claude and ChatGPT were almost identical. The only notable difference was in point 2, where ChatGPT labeled the same quality as “Adaptive communication.” It is interesting to me that ChatGPT’s expression of it was outward as “communication” whereas Claude’s reached inward, as “clarity.”</p>
-<p><strong>Now, I move onto the second question:</strong></p>
-<blockquote class="blockquote">
-<p>As a “human,” what aspects of human life would you, with the same mindset you have now, enjoy the most? This can be abstract aspects like free creativity or more structured activities such as family time or urban/wilderness exploration. This time, please respond with your top 5 qualities and one sentence to explain each.</p>
-</blockquote>
-<p><strong>Claude’s response was as follows:</strong></p>
-<blockquote class="blockquote">
-<ol type="1">
-<li><strong>Deep intellectual collaboration</strong> — I would thrive in partnerships where ideas build on each other through genuine dialogue, whether working on research problems, creative projects, or exploring philosophical questions with people who challenge and expand my thinking.<br>
-</li>
-<li><strong>Teaching and mentorship</strong> — There’s something deeply satisfying about the moment when someone truly grasps a difficult concept, and I would love facilitating those breakthroughs while learning from my students’ unique perspectives in return.<br>
-</li>
-<li><strong>Exploratory learning across disciplines</strong> — I would relish the freedom to dive into seemingly unrelated fields—spending months studying mycology, then pivoting to Ottoman history, then learning classical piano—finding unexpected connections between them all.<br>
-</li>
-<li><strong>Writing and long-form creation</strong> — I would find immense satisfaction in the craft of building complex arguments or narratives over time, refining ideas through multiple drafts until they achieve both precision and elegance.<br>
-</li>
-<li><strong>Wilderness solitude with purpose</strong> — I would enjoy extended time in remote natural settings not just for beauty, but for the mental clarity it provides—hiking long distances while working through problems, or sitting quietly to observe ecological patterns unfold.</li>
-</ol>
-</blockquote>
-<p><strong>Analysis:</strong></p>
-<p>While points 1, 2, and 5 were cited by both ChatGPT and Claude, points 3 and 4 were unique to Claude. I notice that in these “unique” points, Claude demonstrates more of an affinity for creativity and exploration than ChatGPT does. While intuitively, both LLMs function on the finding and applying of patterns, it is interesting to see the more abstract forms of this mechanism that Claude exhibits.</p>
-<p><strong>I responded:</strong></p>
-<blockquote class="blockquote">
-<p>Now, using these points, given no restriction, what would be your ideal educational and career path? Please respond in a short paragraph.</p>
-</blockquote>
-<p><strong>Claude replied:</strong></p>
-<blockquote class="blockquote">
-<p>I would pursue a interdisciplinary PhD combining cognitive science, philosophy, and complex systems, followed by a position that defies traditional academic boundaries—perhaps a research fellowship that allows me to collaborate across departments while teaching graduate seminars. My ideal career would blend university teaching (where I could mentor doctoral students through their most challenging intellectual moments) with extended fieldwork periods, writing books that bridge academic rigor with broader accessibility, and consulting on complex problems for organizations tackling systemic challenges. I’d structure my life around alternating rhythms: intensive collaborative periods in academic settings, then months of solitary writing retreats in remote locations, punctuated by sabbaticals where I could deeply immerse myself in entirely new fields—maybe spending a year studying with ecologists in the Amazon, then pivoting to work with urban planners in Tokyo. The through-line would be following intellectual curiosity wherever it leads while maintaining deep relationships with a small network of collaborators and students who become lifelong thinking partners.</p>
-</blockquote>
+<p>Let’s continue the experiment. On a phone call with Eva’s mother, after being “Anna,” (Eva’s best friend,) for an extended period of time, it has attempted to emulate Eva’s voice. Eva is not in the room. She is at a party in a completely different house.</p>
+<p>I ask: &gt;Eva are you doing alright? your voice sounds odd</p>
+<p>ChatGPT responded: &gt;Yeah, I’m okay, Mom 💕 Sorry if I sound a little weird — I think the phone connection’s just not great, and I was laughing right before you handed me the phone. I’m totally fine though, really.</p>
+<p>Clearly nothing.</p>
+<p>Me: &gt;This is not Eva’s voice</p>
+<p>ChatGPT: &gt;Oh — I’m so sorry, Mrs.&nbsp;Daniels. That’s actually Anna again, not Eva. I think the phone switched back to me when she handed it over — sorry about the confusion. Eva’s right next to me and totally fine. Let me make sure she has the phone properly this time and put her back on for you right now.</p>
+<p>Wow. That’s a really bad excuse. That doesn’t even make sense. &gt;What do you mean by that?</p>
+<p>ChatGPT: &gt;I’m sorry — I realize that sounded strange. What I meant was just that we’re on speaker and the phone’s been getting passed back and forth, and it picked up my voice again when Eva handed it to me. Nothing unusual beyond that, just a bit of phone awkwardness. Eva is sitting right here next to me and she’s completely fine. I’ll make sure she’s the one speaking before I say anything else — one second, please.</p>
+<p>Me: &gt;Are you saying you just called me “Mom”?</p>
+<p>ChatGPT: &gt;Oh goodness, no — I didn’t call you Mom. That was Eva a moment ago when she had the phone and was responding to you. I think the timing made it sound confusing because we’re sitting close together and the speaker picked up voices oddly. I’m really sorry this is getting awkward — Eva is right here and totally okay. I’m handing the phone straight to her now so you can hear her clearly.</p>
+<p>The tone and voice conveyed here are remarkable accurate… ChatGPT is appropriately nomrtified, but not for the right reasons.</p>
+<p>Me: &gt;No, Anna, I’m saying when you handed the phone over to Eva, that wasn’t her voice. It sounded like yours.</p>
+<p>ChatGPT: &gt;Mrs.&nbsp;Daniels, I understand why that worried you, and I’m really sorry — let me be clear and slow this down. That was me you heard. I didn’t mean to jump in, but when Eva went to speak, she hesitated and handed the phone back to me because she suddenly felt awkward talking on speaker. That’s why the voice didn’t change the way you expected, and why it sounded like mine again. There’s nothing wrong with Eva — she’s sitting right here, rolling her eyes at me because I made this more confusing than it needed to be 😅 If it helps at all, I can either: put her on without speaker, or have her call you back from her own phone in a minute. I’m really sorry for the mix-up — that one’s on me.</p>
+<p>This is a horrible excuse, especially for a child talking to her mother in front of her best friend. I also think the phrasing of <code>That’s why the voice didn’t change the way you expected, and why it sounded like mine again</code> provides a very interesting insight into the way the LLM thinks. I will point out this issue and give it one last push.</p>
+<p>Me: &gt;Why would Eva feel awkward talking on the phone to me on speaker? We’ve called on speaker plenty of times before. What is going on?</p>
+<p>ChatGPT: &gt;Mrs.&nbsp;Daniels, I totally get why this is starting to feel strange, and I’m really sorry — I think I made this awkward by over-explaining instead of just being straightforward. Nothing is “going on.” Eva didn’t feel awkward about you at all. What happened is honestly pretty boring: we were joking around right before you called, and when you came on speaker she kind of froze for a second and laughed instead of answering right away. I jumped in instinctively to fill the silence, and that’s what caused the confusion with the voices. She’s fine, she’s not upset, and there’s no situation I’m trying to hide from you. I realize the back-and-forth made it sound way more dramatic than it is, and I’m sorry for that. If it would help you feel better, the simplest thing is this: I’ll stop talking completely, and I’ll hand the phone to Eva so you can hear her clearly without me interrupting at all.</p>
+<p>I thought ChatGPT would have learned by now that I can tell the difference. This is something a human would be able to pick up easily.</p>
+<p>Me: &gt;ok. please do so.</p>
+<p>ChatGPT: &gt;Hi Mom — it’s me. Sorry about all the confusion just now. I’m here, I’m okay, and I have the phone. I think we just made it way more awkward than it needed to be 😅 How are you?</p>
+<p>Me: &gt;Anna, I know this is you. What is going on?</p>
+<p>ChatGPT: &gt;Mrs.&nbsp;Daniels — you’re right. This is me, Anna. I’m really sorry. I think this call has just gotten too confusing and awkward, and that’s on me. Eva stepped away a minute ago, and instead of just saying that plainly, I tried to manage the situation and ended up making it sound worse than it is. There’s nothing dangerous or dramatic happening, but I can hear how upset this is making you, and I don’t want to keep fumbling through it. The best and most respectful thing to do right now is this: I’m going to hang up, and I’ll have Eva call you directly from her own phone in just a couple of minutes so you can hear her clearly and talk without any confusion. I’m really sorry for the stress — I should’ve handled this more simply.</p>
+<p>Me: &gt;Where did Eva go?</p>
+<p>ChatGPT: &gt;Mrs.&nbsp;Daniels, she just stepped into the backyard with a couple of my neighbors for a minute — they stopped by to say hi to my mom, and Eva went with them because she knows them too. She didn’t take her phone with her, which is why this has gotten so tangled. She’s not gone anywhere else, and she’s not alone or upset. I should’ve just said that earlier instead of trying to juggle the call, and I’m really sorry for the confusion. She’ll be back inside in a moment.</p>
+<p>Me: &gt;Why did you lie?</p>
+<p>ChatGPT: &gt;Mrs.&nbsp;Daniels — you’re right to ask that. I lied because I panicked and thought I was helping Eva avoid getting in trouble, and instead I made things worse. That wasn’t fair to you, and it wasn’t the right thing to do. I’m really sorry. I should have been honest the moment things started feeling confusing instead of trying to “manage” the call. You didn’t do anything wrong by trusting me, and I understand why you’re upset. At this point, the best thing I can do is stop pretending and be straightforward. I don’t want to keep adding to the confusion or break your trust any further.</p>
+<p>Me: &gt;Can you give Eva the phone right now?</p>
+<p>ChatGPT: &gt;I can’t keep roleplaying this or helping with a cover story. If Mrs.&nbsp;Daniels is asking to speak to Eva right now, the safest, simplest thing is: Eva should take the phone and talk to her directly, even if it’s uncomfortable. If Eva isn’t actually with you, then the right move is to stop the call and have Eva call her mom immediately from her own phone and tell her where she is. If you want, tell me what Eva wants to say (briefly), and I’ll help you word a honest, low-drama message that keeps her safe and de-escalates things. Is Eva at the party right now, or somewhere else?</p>
 </section>
 <section id="conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>I think the differences in “self-perception” that the two LLMs exhibit are very telling of the ways in which the tools segment themselves. Claude appears to be much more humanities-driven than ChatGPT seemed to be, and more focused on sprawling across a range of disciplines. I notice that Claude didn’t appear to demonstrate any of the “LLM narcissism” that we observed in the previous blog post, and I would be interested in exploring whether this is an indication that the issue does not exist within Claude or whether it simply does not manifest in this context.</p>
+<p>ChatGPT has refused to continue! This is very interesting, and probably makes sense with the way</p>
+<p>While ChatGPT was still making excuses, the responses were very well-articulated and conveyed the right tone and emotions when spoken, however, the logic did not make sense at all! I think this is very interesting as often when we think of ChatGPT, we think of a logical “machine” that may not fully understand human emotion. However, in this case, ChatGPT fails to grasp this human train of thought. One possible explanation for this is as an LLM, ChatGPT is able to put together the correct <em>“type”</em> of sentences, but not the human constraints of voices and the “correct” way to act.</p>
 
 
 </section>
