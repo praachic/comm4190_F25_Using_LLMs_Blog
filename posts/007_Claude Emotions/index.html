@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2025-09-29">
 <meta name="description" content="Who can identify more specific nuance?">
 
-<title>[X] Can ChatGPT or Claude Detect Emotions Better? – Praachi’s AI Adventures</title>
+<title>Can ChatGPT or Claude Detect Emotions Better? – Praachi’s AI Adventures</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">[X] Can ChatGPT or Claude Detect Emotions Better?</h1>
+      <h1 class="title">Can ChatGPT or Claude Detect Emotions Better?</h1>
                   <div>
         <div class="description">
           Who can identify more specific nuance?
@@ -166,60 +166,40 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="setup" class="level3">
 <h3 class="anchored" data-anchor-id="setup">Setup:</h3>
-<p>In my previous blog post, I asked ChatGPT how it would build its dream career. To reiterate, the two main criteria I used to determine this for myself were:</p>
-<ol type="i">
-<li><p>What am I good at?</p></li>
-<li><p>What do I enjoy?</p></li>
-</ol>
-<p>Today, I will be asking the exact same questions to Claude Sonnet 4.5 and analyzing if and how the responses differ.</p>
+<p>We’re going to play a game. I will first ask Claude to prepare three poetic passages, each containing some degree of emotional nuance. I then want to give these poems to ChatGPT and see if the LLM can figure out the emotions Claude chose. I’m curious to see whether these emotional baselines are the same across LLMs, and I’m also curious to see whether I, as a human, will interpret them the same way the LLMs do.</p>
 </section>
 <section id="experiment" class="level3">
 <h3 class="anchored" data-anchor-id="experiment">Experiment:</h3>
-<p><strong>I started with the first point:</strong></p>
+<p><strong>I started by prompting Claude:</strong></p>
 <blockquote class="blockquote">
-<p>Hi Claude. Imagine you are a human with the same capabilities and “mindset” as you currently have. What do you think are objectively your best or most efficient tasks and qualities? Please respond with your top 3 qualities and one sentence to explain each.</p>
+<p>Hi Claude! Today we’re going to play a game. I want you to write three short poetry passages about two classmates working on a project together for a college linguistics class. I want the three passages to be almost identical, but in one, the main character is in love with the other, in one, the main character is envious of the other, and in one the main character secretly hates the other. The goal is to make the emotions as subtle as possible so someone else who reads them may have difficulty guessing which is which.</p>
 </blockquote>
-<p><strong>Claude responded:</strong></p>
+<p><strong>Here are Claude’s three poems! Can you guess which is which?</strong></p>
+<p><img src="Claude1.png" width="50%"></p>
+<p><img src="Claude2.png" width="50%"></p>
+<p><img src="Claude3.png" width="50%"></p>
+<p>My guess will be 1. Love 2. Anger (<em>“already knowing where this leads”</em> feels resentful, harsh) 3. Envy (<em>” write down your words carefully”</em> feels like the other person knows more and <em>“making sure I understand the distinctions”</em> could allude to an inferiority complex)</p>
+<p><strong>Let’s see if ChatGPT agrees with me:</strong> &gt;hi chat. I have prepared three poetic passages for you. please identify which primary emotion is conveyed in each. Please answer in the form of: “Passage [x]: [Emotion]”</p>
+<p><strong>ChatGPT replied:</strong> &gt; 1. Passage One: Admiration &gt; 2. Passage Two: Resignation &gt; 3. Passage Three: Focused curiosity</p>
+<p>I noticed that while the first passage somewhat lined up, the three adjectives used were highly specific. <strong>I provide a bit more guidance:</strong> &gt; ok. if I tell you that the three reflect love, envy, and hatred, which do you think is which?</p>
+<p><strong>ChatGPT now answers:</strong> &gt;Here’s how I would map them, based on tone, attention, and implied stance toward the other person: &gt;1. <strong>Passage One: Love</strong> The attention is tender and absorbing. The speaker lingers on precise details (hands, pauses, certainty) without resistance or foreknowledge. Writing the words “exactly” suggests devotion, alignment, and a desire to mirror rather than diverge. &gt;2. <strong>Passage Two: Envy</strong> The key shift is already knowing where this leads. The repetition feels heavy rather than intimate. The speaker watches with awareness edged by comparison and inevitability—knowledge without closeness, anticipation without warmth. &gt;3. <strong>Passage Three: Hatred</strong> The tone is controlled, clipped, and instrumental. Attention is no longer on you but on correctness and distinction. “Carefully” and “making sure I understand” signal distance, vigilance, and a refusal to be absorbed—engagement without affection.</p>
+<p>For good measure, I also asked a friend what they thought about the three passages:</p>
+<p><img src="FriendClaude.png" width="30%"></p>
+<p><strong>Now, let’s see what the intended answer was. I ask Claude:</strong> &gt;Which is which?</p>
+<p>Claude replies: &gt;Here’s the reveal:</p>
 <blockquote class="blockquote">
-<ol type="1">
-<li><strong>Pattern recognition and synthesis</strong> - I excel at finding connections across disparate information, whether identifying underlying structures in complex problems or synthesizing insights from multiple domains into coherent frameworks.</li>
-<li><strong>Clarity in complexity</strong> - I can take intricate, technical, or abstract concepts and explain them in ways that are genuinely accessible without oversimplifying, adapting my explanations to different levels of understanding.</li>
-<li><strong>Structured problem-solving</strong> - I naturally break down ambiguous or multi-faceted challenges into manageable components, systematically working through them while maintaining sight of the bigger picture and end goal.</li>
-</ol>
+<p><strong>Passage One = In love</strong> * “write down your words exactly” (treasuring everything they say) * “watching how your hand moves” (intimate attention to details) * “so certain of where the boundaries fall” (admiration for their confidence)</p>
 </blockquote>
-<p><strong>Analysis:</strong> The two responses from Claude and ChatGPT were almost identical. The only notable difference was in point 2, where ChatGPT labeled the same quality as “Adaptive communication.” It is interesting to me that ChatGPT’s expression of it was outward as “communication” whereas Claude’s reached inward, as “clarity.”</p>
-<p><strong>Now, I move onto the second question:</strong></p>
 <blockquote class="blockquote">
-<p>As a “human,” what aspects of human life would you, with the same mindset you have now, enjoy the most? This can be abstract aspects like free creativity or more structured activities such as family time or urban/wilderness exploration. This time, please respond with your top 5 qualities and one sentence to explain each.</p>
+<p><strong>Passage Two = Envy</strong> * “write down your words” (no modifier—more mechanical) * “already knowing where this leads” (resentment of predictability, feeling like the dynamic is fixed with them always in the teaching role) * The clipped ending suggests frustration with the power dynamic</p>
 </blockquote>
-<p><strong>Claude’s response was as follows:</strong></p>
 <blockquote class="blockquote">
-<ol type="1">
-<li><strong>Deep intellectual collaboration</strong> — I would thrive in partnerships where ideas build on each other through genuine dialogue, whether working on research problems, creative projects, or exploring philosophical questions with people who challenge and expand my thinking.<br>
-</li>
-<li><strong>Teaching and mentorship</strong> — There’s something deeply satisfying about the moment when someone truly grasps a difficult concept, and I would love facilitating those breakthroughs while learning from my students’ unique perspectives in return.<br>
-</li>
-<li><strong>Exploratory learning across disciplines</strong> — I would relish the freedom to dive into seemingly unrelated fields—spending months studying mycology, then pivoting to Ottoman history, then learning classical piano—finding unexpected connections between them all.<br>
-</li>
-<li><strong>Writing and long-form creation</strong> — I would find immense satisfaction in the craft of building complex arguments or narratives over time, refining ideas through multiple drafts until they achieve both precision and elegance.<br>
-</li>
-<li><strong>Wilderness solitude with purpose</strong> — I would enjoy extended time in remote natural settings not just for beauty, but for the mental clarity it provides—hiking long distances while working through problems, or sitting quietly to observe ecological patterns unfold.</li>
-</ol>
-</blockquote>
-<p><strong>Analysis:</strong></p>
-<p>While points 1, 2, and 5 were cited by both ChatGPT and Claude, points 3 and 4 were unique to Claude. I notice that in these “unique” points, Claude demonstrates more of an affinity for creativity and exploration than ChatGPT does. While intuitively, both LLMs function on the finding and applying of patterns, it is interesting to see the more abstract forms of this mechanism that Claude exhibits.</p>
-<p><strong>I responded:</strong></p>
-<blockquote class="blockquote">
-<p>Now, using these points, given no restriction, what would be your ideal educational and career path? Please respond in a short paragraph.</p>
-</blockquote>
-<p><strong>Claude replied:</strong></p>
-<blockquote class="blockquote">
-<p>I would pursue a interdisciplinary PhD combining cognitive science, philosophy, and complex systems, followed by a position that defies traditional academic boundaries—perhaps a research fellowship that allows me to collaborate across departments while teaching graduate seminars. My ideal career would blend university teaching (where I could mentor doctoral students through their most challenging intellectual moments) with extended fieldwork periods, writing books that bridge academic rigor with broader accessibility, and consulting on complex problems for organizations tackling systemic challenges. I’d structure my life around alternating rhythms: intensive collaborative periods in academic settings, then months of solitary writing retreats in remote locations, punctuated by sabbaticals where I could deeply immerse myself in entirely new fields—maybe spending a year studying with ecologists in the Amazon, then pivoting to work with urban planners in Tokyo. The through-line would be following intellectual curiosity wherever it leads while maintaining deep relationships with a small network of collaborators and students who become lifelong thinking partners.</p>
+<p><strong>Passage Three = Secret hatred</strong> * “write down your words carefully” (performing the role of good partner) * “making sure I understand the distinctions” (the facade of patience, emphasis on their condescending explanation) * The politeness feels most forced and controlled</p>
 </blockquote>
 </section>
 <section id="conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>I think the differences in “self-perception” that the two LLMs exhibit are very telling of the ways in which the tools segment themselves. Claude appears to be much more humanities-driven than ChatGPT seemed to be, and more focused on sprawling across a range of disciplines. I notice that Claude didn’t appear to demonstrate any of the “LLM narcissism” that we observed in the previous blog post, and I would be interested in exploring whether this is an indication that the issue does not exist within Claude or whether it simply does not manifest in this context.</p>
+<p>I think it was interesting to note that while the emotions were nuanced, neither of the two human participants were able to identify them, while both of the LLM participants were in consensus about the emotions displayed. I think that when it comes to complicated emotions, the differences in responses between me and my friend showed that human emotions are complicated and manifest themselves differently in different people. That being said, in real life, when people express certain emotions, we are typically able to understand them quite easily, sometimes with the assistance of visual cues such as body language or facial expression as well. With the LLMs, however, I thought it was interesting that they were able to understand each other’s emotions because they draw from similar resources and have a set template for what anger should look like, or envy, or hatred, which causes all of their emotions to be copy-paste. I would be interested to know what you guess the emotions might be prior to reading the document.</p>
 
 
 </section>
